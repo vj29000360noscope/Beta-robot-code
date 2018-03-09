@@ -100,6 +100,8 @@ public class positionCSwitchScale {
 		//Receives letter L from message
 		else if (gameData.substring(0, 1).equalsIgnoreCase("L")) {
 
+			
+			
 			if (Time.get()<=10) {
 				rightTalonMotor.set(ControlMode.PercentOutput, -.4);
 				leftTalonMotor.set(ControlMode.PercentOutput, .4);
@@ -118,8 +120,26 @@ public class positionCSwitchScale {
 			
 		}
 		
+	
+		//Recieves letter R from message
+	
+		else if (gameData.substring(0, 1).equalsIgnoreCase("R") && gameData.substring(1, 2).equalsIgnoreCase("R")) {
+			
+			if(autoTime.get()<4) {
+				//Drive forward for 4 seconds
+				rightTalon.set(ControlMode.PercentOutput,-.2);
+				leftTalon.set(ControlMode.PercentOutput,.2);
+			
+			} else if(autoTime.get()>=4) {
+				//After 4 seconds, stop moving
+				rightTalon.set(ControlMode.PercentOutput, 0);
+				leftTalon.set(ControlMode.PercentOutput, 0);
+			}
+	
+		}
 		//drives straight for 10 seconds
 		
 		
 	}
+}
 
