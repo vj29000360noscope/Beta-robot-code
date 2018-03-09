@@ -6,7 +6,7 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
-
+ 
 public class positionASwitchScale {
 
 	String gameData = DriverStation.getInstance().getGameSpecificMessage();
