@@ -82,7 +82,7 @@ public class positionASwitchScale {
 			}
 			
 		}
-		//Drives straight 
+		//Drives Straight 
 		
 		//Receives Letter R from message
 		else if (gameData.substring(0, 1).equalsIgnoreCase("R")) {
